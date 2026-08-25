@@ -2,16 +2,24 @@
 
 InvoiceHub is an offline-first GST billing and business app for Indian small businesses.
 
-It helps you manage billing, products, stock, payments, expenses, accounts, GST reports, and business documents from Windows, Android, or the web.
+It helps you manage billing, products, stock, payments, expenses, accounts, GST reports, and business documents from Windows and Android.
 
-## Download the current test version
+## Download InvoiceHub 1.1.0
 
 | Platform | Download |
 | --- | --- |
-| Android | [Download the APK](https://github.com/Changtey/InvoiceHub-releases/releases/download/v1.0.0-1/InvoiceHub-Release-Test-1.0.0-1.apk) |
-| Windows | [Download the installer](https://github.com/Changtey/InvoiceHub-releases/releases/download/v1.0.0-1/InvoiceHub-Desktop-Setup-1.0.0-2026-08-09.exe) |
+| Windows | [Download the Windows installer](https://github.com/Changtey/InvoiceHub-releases/releases/download/v1.1.0/InvoiceHub-Setup-1.1.0.exe) |
+| Android | [Download the Android APK](https://github.com/Changtey/InvoiceHub-releases/releases/download/v1.1.0/InvoiceHub-Android-1.1.0.apk) |
 
-See the [release page](https://github.com/Changtey/InvoiceHub-releases/releases/tag/v1.0.0-1) for file checks and release notes.
+See the [InvoiceHub 1.1.0 release page](https://github.com/Changtey/InvoiceHub-releases/releases/tag/v1.1.0) for checksums, verification results, and release notes.
+
+## Automatic updates
+
+- InvoiceHub checks for updates whenever it opens.
+- Windows downloads verified updates in the background and installs them quietly when the app closes.
+- The direct Android build verifies the update before asking Android to install it.
+- Android may show a system approval screen when a fully silent update is not allowed.
+- Existing Windows 1.0.0 users need one manual 1.1.0 install. Later versions can update automatically.
 
 ## What InvoiceHub helps with
 
@@ -22,20 +30,14 @@ See the [release page](https://github.com/Changtey/InvoiceHub-releases/releases/
 - Work locally even without an internet connection
 - Optionally keep approved business data in sync across devices
 
-## Use it your way
-
-- **Windows:** use the desktop installer for a computer-based billing workspace.
-- **Android:** install the APK on your phone for on-the-go work.
-- **Local or shared:** use the app on one device, or join an approved shared workspace when your team needs to work together.
-
 ## Important
 
-- Version 1.0.0-1 is a **test release** and has not yet completed final manual testing.
-- The Windows installer is not digitally signed. Download it only from this official release page.
-- If you already use InvoiceHub, make a backup of your business data before trying a test version.
+- The Windows installer is not digitally signed, so Windows may show a security warning.
+- Download InvoiceHub only from this official repository.
+- Back up important business data before installing any major update.
 
 ## About this download repository
 
-This project provides official InvoiceHub download files only. It does not contain the InvoiceHub application source code.
+This repository contains only InvoiceHub installers, update metadata, checksums, and this download guide. It does not contain the InvoiceHub application source code.
 
-GitHub automatically displays two links called "Source code" on every tagged release. Those automatic links contain only a short repository README, not the InvoiceHub application source.
+GitHub automatically displays two links named "Source code" on every tagged release. Those automatic archives contain only this small download repository, not the InvoiceHub application source.
