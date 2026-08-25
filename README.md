@@ -9,7 +9,7 @@ businesses. This is the official downloads-only repository.
 | --- | --- | --- |
 | Windows 10/11, 64-bit | 1.1.2 | [Download the Windows installer](https://github.com/Changtey/InvoiceHub-releases/releases/download/v1.1.2/InvoiceHub-Setup-1.1.2.exe) |
 | Debian/Ubuntu Linux, 64-bit | 1.1.2 | [Download the Linux installer](https://github.com/Changtey/InvoiceHub-releases/releases/download/v1.1.2/InvoiceHub-1.1.2-linux.deb) |
-| Android direct install | 1.1.0 | [Download the current Android APK](https://github.com/Changtey/InvoiceHub-releases/releases/download/v1.1.0/InvoiceHub-Android-1.1.0.apk) |
+| Android 7 or newer, direct install | 1.1.2 (build 4) | [Download the Android APK](https://github.com/Changtey/InvoiceHub-releases/releases/download/v1.1.2/InvoiceHub-Android-1.1.2.apk) |
 
 See the [InvoiceHub 1.1.2 release page](https://github.com/Changtey/InvoiceHub-releases/releases/tag/v1.1.2)
 for checksums, verification results, and release notes.
@@ -36,6 +36,17 @@ The 1.1.2 Linux installer supports 64-bit Debian and Ubuntu systems.
 Linux may ask for the computer administrator password. This is a required
 operating-system approval for installing or replacing a system package.
 
+## Install on Android
+
+1. Download `InvoiceHub-Android-1.1.2.apk`.
+2. Open the APK on the phone.
+3. If Android asks, allow installation from the browser or file manager used
+   for the download, then finish the system installation screen.
+4. Open InvoiceHub from the app list.
+
+Only install the official signed APK from this repository. Android may require
+one system approval screen for direct installs and updates.
+
 ## Automatic updates
 
 - InvoiceHub checks for a newer stable release every time the desktop app opens.
@@ -46,8 +57,10 @@ operating-system approval for installing or replacing a system package.
   the required administrator approval for a system package.
 - Interrupted downloads and failed installations leave the current working
   version in place and can be retried safely.
-- The Android direct-install edition has its own verified Android update flow.
-  Version 1.1.0 remains the current public Android release.
+- The Android direct-install edition checks its verified feed every time it
+  opens. After **Update Now**, it verifies the APK size, checksum, package,
+  version, and signing certificate before installation. After Android reports
+  success, InvoiceHub asks the system to reopen the latest version.
 
 ## What changed in 1.1.2
 
@@ -57,6 +70,7 @@ operating-system approval for installing or replacing a system package.
   step, restore normal app closing, and allow a safe retry.
 - Windows updates explicitly reuse the current installation folder.
 - Release preparation now works in standard Windows PowerShell.
+- Added the signed Android 1.1.2 build and its verified automatic-update feed.
 - Unneeded source maps, tests, environment files, and private signing files are
   excluded from the packaged application.
 
@@ -65,10 +79,14 @@ operating-system approval for installing or replacing a system package.
 - 98 Web/Desktop application tests passed.
 - 18 desktop updater and security tests passed.
 - Android analysis found no issues and all 117 Android tests passed.
+- The signed Android 1.1.2 APK package, version, build number, updater
+  permissions, alignment, contents, size, and checksum were verified.
 - Both production and full dependency audits found zero known vulnerabilities.
 - Windows 1.1.2 was built and its packaged version and updater were inspected.
 - The Debian package structure, version, update metadata, and checksums were
   verified. It was not launched on a real Linux computer in this release check.
+- No Android phone was connected, so the APK installation and automatic reopen
+  were not tested on a physical device or emulator.
 
 ## Important
 
