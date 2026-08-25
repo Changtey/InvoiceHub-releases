@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "version": "1.1.0",
-  "versionCode": 2,
-  "downloadUrl": "https://github.com/Changtey/InvoiceHub-releases/releases/download/v1.1.0/InvoiceHub-Android-1.1.0.apk",
-  "sha256": "7643d71a9c67f0446949df0bc66c78c7cfd4152b5e676ea6609b72af86aaf1e1",
-  "size": 64971853
+  "version": "1.1.2",
+  "versionCode": 4,
+  "downloadUrl": "https://github.com/Changtey/InvoiceHub-releases/releases/download/v1.1.2/InvoiceHub-Android-1.1.2.apk",
+  "sha256": "b3cb3fbe3bb52545c3f4d8a21073d582cfd41f78c6f886f476b82dd2178cf1a6",
+  "size": 65070157
 }
