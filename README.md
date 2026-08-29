@@ -7,16 +7,16 @@ businesses. This is the official downloads-only repository.
 
 | Platform | Version | Download |
 | --- | --- | --- |
-| Windows 10/11, 64-bit | 1.1.4 | [Download the Windows installer](https://github.com/Changtey/InvoiceHub-releases/releases/download/v1.1.4/InvoiceHub-Setup-1.1.4.exe) |
+| Windows 10/11, 64-bit | 1.1.5 | [Download the Windows installer](https://github.com/Changtey/InvoiceHub-releases/releases/download/v1.1.5/InvoiceHub-Setup-1.1.5.exe) |
 | Debian/Ubuntu Linux, 64-bit | 1.1.2 | [Download the Linux installer](https://github.com/Changtey/InvoiceHub-releases/releases/download/v1.1.2/InvoiceHub-1.1.2-linux.deb) |
-| Android 7 or newer, direct install | 1.1.4 (build 10) | [Download the Android APK](https://github.com/Changtey/InvoiceHub-releases/releases/download/v1.1.4/InvoiceHub-Android-1.1.4.apk) |
+| Android 7 or newer, direct install | 1.1.5 (build 11) | [Download the Android APK](https://github.com/Changtey/InvoiceHub-releases/releases/download/v1.1.5/InvoiceHub-Android-1.1.5.apk) |
 
-See the [InvoiceHub 1.1.4 release page](https://github.com/Changtey/InvoiceHub-releases/releases/tag/v1.1.4)
+See the [InvoiceHub 1.1.5 release page](https://github.com/Changtey/InvoiceHub-releases/releases/tag/v1.1.5)
 for checksums, verification results, and release notes.
 
 ## Install on Windows
 
-1. Download `InvoiceHub-Setup-1.1.4.exe`.
+1. Download `InvoiceHub-Setup-1.1.5.exe`.
 2. Open the installer and choose the installation folder if needed.
 3. Launch InvoiceHub from the desktop or Start menu shortcut.
 
@@ -39,7 +39,7 @@ system package is installed or replaced.
 
 ## Install on Android
 
-1. Download `InvoiceHub-Android-1.1.4.apk`.
+1. Download `InvoiceHub-Android-1.1.5.apk`.
 2. Open the APK on the phone.
 3. If Android asks, allow installation from the browser or file manager used
    for the download, then finish the Android installation screen.
@@ -61,39 +61,41 @@ required “Allow from this source” and installation confirmation screens.
 - Interrupted downloads and failed installations leave the current working
   version in place and can be tried again.
 
-## What changed in 1.1.4
+## What changed in 1.1.5
 
-- Android reports now generate clean multi-page PDF files that can be previewed,
-  printed, and shared.
-- Added printable receipts for Money In and Payment In.
-- Added printable vouchers for Payment Out.
-- Fixed sales total editing so the decimal part can be removed, for example
-  from 2,500.11 to 2,500.
-- Invoice dates now use a clear format such as 03 March 2026 in forms, lists,
-  details, and PDF documents.
-- Confirmed startup update checks and the **Update Now** flow for Android and
-  Windows.
-- Unneeded source maps, tests, environment files, and private signing files are
-  excluded from the packaged application.
+- Dates now use short, readable month names such as `25 Jan 2025` and
+  `04 Sep 2026` across Windows and Android, including forms, lists, details,
+  reports, receipts, vouchers, and PDFs.
+- Existing payments can now be opened directly from payment history.
+- Windows adds payment editing and receipt or voucher printing.
+- Android adds receipt or voucher details, printing, and PDF sharing.
+- The refreshed packages include the latest payment and report improvements
+  from the shared InvoiceHub workspace.
+- Unneeded source maps, tests, environment files, application source files, and
+  private Android signing files are excluded from the packaged Windows app.
 
 ## Verification
 
-- 128 Windows/Web application tests passed.
-- 18 Windows updater and security tests passed.
+- All 143 Windows/Web application tests passed.
+- All 18 Windows updater and security tests passed.
 - Android analysis found no issues and all 137 Android tests passed.
-- The signed Android APK package name, version 1.1.4, build 10, permissions,
-  alignment, size, checksum, and signing certificate were verified.
-- The Windows package embeds version 1.1.4, and its update file matches the
-  exact installer.
-- No physical Android phone was connected, and the Windows installer was not
-  installed during this release session.
+- Both the production-only and full Windows/Web package audits reported zero
+  known vulnerabilities.
+- The signed Android APK package name, version 1.1.5, build 11, alignment, size,
+  checksum, and signing certificate were verified. Its signing certificate is
+  unchanged from version 1.1.4.
+- The Windows package embeds version 1.1.5, and its update file matches the exact
+  installer and update block map.
+- The Windows installer completed successfully on the release laptop, and the
+  installed executable reports version 1.1.5.
+- No physical Android phone was connected during this release session.
 
 ## SHA-256
 
 - Windows installer:
-  `7051b9972efe0c2e67a114777ee5bf2b0eb60434bc4c4dd28163fc82f9126a45`
+  `1133edd6e3378264301956fe63b1234a6f82da560dfe86f4bd02ebff4087eebf`
 - Android APK:
-  `ef58ec02a3f2e00f62432c9974fbd0664f189dd873b151096edae001b84394a3`
+  `8a1de3908ae62afc4a4aaa2829b05a0d71caaed5a651302db06d3fd0164454f8`
 
 ## Important
 
