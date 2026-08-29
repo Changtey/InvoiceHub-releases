@@ -3,20 +3,20 @@
 InvoiceHub is an offline-first GST billing and business app for Indian small
 businesses. This is the official downloads-only repository.
 
-## Download InvoiceHub 1.1.2
+## Download InvoiceHub
 
 | Platform | Version | Download |
 | --- | --- | --- |
-| Windows 10/11, 64-bit | 1.1.2 | [Download the Windows installer](https://github.com/Changtey/InvoiceHub-releases/releases/download/v1.1.2/InvoiceHub-Setup-1.1.2.exe) |
+| Windows 10/11, 64-bit | 1.1.4 | [Download the Windows installer](https://github.com/Changtey/InvoiceHub-releases/releases/download/v1.1.4/InvoiceHub-Setup-1.1.4.exe) |
 | Debian/Ubuntu Linux, 64-bit | 1.1.2 | [Download the Linux installer](https://github.com/Changtey/InvoiceHub-releases/releases/download/v1.1.2/InvoiceHub-1.1.2-linux.deb) |
-| Android 7 or newer, direct install | 1.1.2 (build 8) | [Download the Android APK](https://github.com/Changtey/InvoiceHub-releases/releases/download/v1.1.2/InvoiceHub-Android-1.1.2.apk) |
+| Android 7 or newer, direct install | 1.1.4 (build 10) | [Download the Android APK](https://github.com/Changtey/InvoiceHub-releases/releases/download/v1.1.4/InvoiceHub-Android-1.1.4.apk) |
 
-See the [InvoiceHub 1.1.2 release page](https://github.com/Changtey/InvoiceHub-releases/releases/tag/v1.1.2)
+See the [InvoiceHub 1.1.4 release page](https://github.com/Changtey/InvoiceHub-releases/releases/tag/v1.1.4)
 for checksums, verification results, and release notes.
 
 ## Install on Windows
 
-1. Download `InvoiceHub-Setup-1.1.2.exe`.
+1. Download `InvoiceHub-Setup-1.1.4.exe`.
 2. Open the installer and choose the installation folder if needed.
 3. Launch InvoiceHub from the desktop or Start menu shortcut.
 
@@ -26,77 +26,74 @@ repository before continuing.
 
 ## Install on Linux
 
-The 1.1.2 Linux installer supports 64-bit Debian and Ubuntu systems.
+The latest Linux installer remains version 1.1.2 and supports 64-bit Debian and
+Ubuntu systems.
 
 1. Download `InvoiceHub-1.1.2-linux.deb`.
 2. Open it with the system Software Install app, or run
    `sudo apt install ./InvoiceHub-1.1.2-linux.deb` from the download folder.
 3. Launch InvoiceHub from the applications menu.
 
-Linux may ask for the computer administrator password. This is a required
-operating-system approval for installing or replacing a system package.
+Linux may ask for the computer administrator password. This is required when a
+system package is installed or replaced.
 
 ## Install on Android
 
-1. Download `InvoiceHub-Android-1.1.2.apk`.
+1. Download `InvoiceHub-Android-1.1.4.apk`.
 2. Open the APK on the phone.
 3. If Android asks, allow installation from the browser or file manager used
-   for the download, then finish the system installation screen.
+   for the download, then finish the Android installation screen.
 4. Open InvoiceHub from the app list.
 
 Only install the official signed APK from this repository. Android may show its
-required “Allow from this source” or installation confirmation screens.
+required “Allow from this source” and installation confirmation screens.
 
 ## Automatic updates
 
-- InvoiceHub checks for a newer stable release every time the desktop app opens.
-- It never downloads a new version until the user chooses **Update Now**.
-- After **Update Now**, it downloads and verifies the package, installs it in
-  the existing application location, and automatically reopens the latest version.
-- Windows updates are silent for a normal per-user installation. Linux may show
-  the required administrator approval for a system package.
+- InvoiceHub checks for a newer stable release whenever the Android or Windows
+  app starts.
+- It does not download an update until the user chooses **Update Now**.
+- On Windows, **Update Now** downloads and verifies the installer, installs it
+  in the current app location, and automatically reopens InvoiceHub.
+- On Android, **Update Now** downloads and verifies the APK. Android then shows
+  its required installation approval screen. Newer Android phones may show an
+  **InvoiceHub updated** notification that can be tapped to open the app.
 - Interrupted downloads and failed installations leave the current working
-  version in place and can be retried safely.
-- The Android direct-install edition checks its verified feed every time it
-  opens. After **Update Now**, it requests any required Android installation
-  approval before downloading and continues automatically when the user
-  returns. It verifies the APK size, checksum, package, version, and signing
-  certificate before installation. Android 10 and newer then show an
-  **InvoiceHub updated** notification; tap it once to open the latest version.
-  Older Android versions reopen it automatically when the system permits it.
+  version in place and can be tried again.
 
-## What changed in 1.1.2
+## What changed in 1.1.4
 
-- Fixed a timing fault that could leave the updater stuck if the installer
-  failed exactly while the download was completing.
-- Failed update checks, downloads, and installer starts now report the correct
-  step, restore normal app closing, and allow a safe retry.
-- Windows updates explicitly reuse the current installation folder.
-- Release preparation now works in standard Windows PowerShell.
-- Added the signed Android 1.1.2 build and its verified automatic-update feed.
-- Fixed the first direct-update approval handoff so the update resumes
-  automatically after the user returns from Android Settings.
-- Added a reliable completion notification for Android versions that block
-  apps from forcing themselves into the foreground after installation.
-- Added a package-replacement fallback so the newly installed APK can report
-  completion even when the previous updater process has already stopped.
+- Android reports now generate clean multi-page PDF files that can be previewed,
+  printed, and shared.
+- Added printable receipts for Money In and Payment In.
+- Added printable vouchers for Payment Out.
+- Fixed sales total editing so the decimal part can be removed, for example
+  from 2,500.11 to 2,500.
+- Invoice dates now use a clear format such as 03 March 2026 in forms, lists,
+  details, and PDF documents.
+- Confirmed startup update checks and the **Update Now** flow for Android and
+  Windows.
 - Unneeded source maps, tests, environment files, and private signing files are
   excluded from the packaged application.
 
 ## Verification
 
-- 98 Web/Desktop application tests passed.
-- 18 desktop updater and security tests passed.
-- Android analysis found no issues and all 117 Android tests passed.
-- The signed Android 1.1.2 APK package, version, build number, updater
-  permissions, alignment, contents, size, and checksum were verified.
-- Both production and full dependency audits found zero known vulnerabilities.
-- Windows 1.1.2 was built and its packaged version and updater were inspected.
-- The Debian package structure, version, update metadata, and checksums were
-  verified. It was not launched on a real Linux computer in this release check.
-- A live Android 15 emulator updated from build 7 to build 8 using the public
-  GitHub download. The completion notification opened the latest dashboard and
-  no fatal update error occurred. A physical phone was not used for this check.
+- 128 Windows/Web application tests passed.
+- 18 Windows updater and security tests passed.
+- Android analysis found no issues and all 137 Android tests passed.
+- The signed Android APK package name, version 1.1.4, build 10, permissions,
+  alignment, size, checksum, and signing certificate were verified.
+- The Windows package embeds version 1.1.4, and its update file matches the
+  exact installer.
+- No physical Android phone was connected, and the Windows installer was not
+  installed during this release session.
+
+## SHA-256
+
+- Windows installer:
+  `7051b9972efe0c2e67a114777ee5bf2b0eb60434bc4c4dd28163fc82f9126a45`
+- Android APK:
+  `ef58ec02a3f2e00f62432c9974fbd0664f189dd873b151096edae001b84394a3`
 
 ## Important
 
