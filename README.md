@@ -7,17 +7,16 @@ businesses. This is the official downloads-only repository.
 
 | Platform | Version | Download |
 | --- | --- | --- |
-| Windows 10/11, 64-bit | 1.1.6 | [Download the Windows installer](https://github.com/Changtey/InvoiceHub-releases/releases/download/v1.1.6/InvoiceHub-Setup-1.1.6.exe) |
-| Debian/Ubuntu Linux, 64-bit | 1.1.6 | [Download the Linux installer](https://github.com/Changtey/InvoiceHub-releases/releases/download/v1.1.6/InvoiceHub-1.1.6-linux.deb) |
-| Android 7 or newer, direct install | 1.1.7 (build 13) | [Download the Android APK](https://github.com/Changtey/InvoiceHub-releases/releases/download/v1.1.7/InvoiceHub-Android-1.1.7.apk) |
+| Windows 10/11, 64-bit | 1.1.8 | [Download the Windows installer](https://github.com/Changtey/InvoiceHub-releases/releases/download/v1.1.8/InvoiceHub-Setup-1.1.8.exe) |
+| Debian/Ubuntu Linux, 64-bit | 1.1.8 | [Download the Linux installer](https://github.com/Changtey/InvoiceHub-releases/releases/download/v1.1.8/InvoiceHub-1.1.8-linux.deb) |
+| Android 7 or newer, direct install | 1.1.8 (build 14) | [Download the Android APK](https://github.com/Changtey/InvoiceHub-releases/releases/download/v1.1.8/InvoiceHub-Android-1.1.8.apk) |
 
-See the [Android 1.1.7 release](https://github.com/Changtey/InvoiceHub-releases/releases/tag/v1.1.7)
-and [Windows/Linux 1.1.6 release](https://github.com/Changtey/InvoiceHub-releases/releases/tag/v1.1.6)
+See the [InvoiceHub 1.1.8 release](https://github.com/Changtey/InvoiceHub-releases/releases/tag/v1.1.8)
 for checksums and release notes.
 
 ## Install on Windows
 
-1. Download `InvoiceHub-Setup-1.1.6.exe`.
+1. Download `InvoiceHub-Setup-1.1.8.exe`.
 2. Open the installer and choose the installation folder if needed.
 3. Launch InvoiceHub from the desktop or Start menu shortcut.
 
@@ -29,9 +28,9 @@ repository before continuing.
 
 The Linux installer supports 64-bit Debian and Ubuntu systems.
 
-1. Download `InvoiceHub-1.1.6-linux.deb`.
+1. Download `InvoiceHub-1.1.8-linux.deb`.
 2. Open it with the system Software Install app, or run
-   `sudo apt install ./InvoiceHub-1.1.6-linux.deb` from the download folder.
+   `sudo apt install ./InvoiceHub-1.1.8-linux.deb` from the download folder.
 3. Launch InvoiceHub from the applications menu.
 
 Linux may ask for the computer administrator password. This is required when a
@@ -39,7 +38,7 @@ system package is installed or replaced.
 
 ## Install on Android
 
-1. Download `InvoiceHub-Android-1.1.7.apk`.
+1. Download `InvoiceHub-Android-1.1.8.apk`.
 2. Open the APK on the phone.
 3. If Android asks, allow installation from the browser or file manager used
    for the download, then finish the Android installation screen.
@@ -50,8 +49,8 @@ required “Allow from this source” and installation confirmation screens.
 
 ## Automatic updates
 
-- InvoiceHub checks for a newer stable release whenever the Android or Windows
-  app starts.
+- InvoiceHub checks for a newer stable release whenever the Android, Windows,
+  or Linux app starts.
 - It does not download an update until the user chooses **Update Now**.
 - On Windows, **Update Now** downloads and verifies the installer, installs it
   in the current app location, and automatically reopens InvoiceHub.
@@ -61,59 +60,31 @@ required “Allow from this source” and installation confirmation screens.
 - Interrupted downloads and failed installations leave the current working
   version in place and can be tried again.
 
-## Android 1.1.7: icons restored
+## What changed in 1.1.8
 
-- Restores dashboard, navigation, and action icons that appeared as boxes in
-  Android 1.1.6 because the icon font was missing from the installer.
-- Includes the InvoiceHub logo and all 123 icons used by the Android app.
-- Keeps the exact invoice totals and GST rounding introduced in 1.1.6.
-- Release preparation checks that registered fonts and the logo are included.
-- The signed APK's package identity, version 1.1.7, build 13, trusted signing
-  certificate, alignment, and included icon characters were inspected.
-- A physical Android phone was not used for a screen check.
+- Repairs missed sync requests, new-record uploads from Android editors, and
+  protection of unsent changes during incoming updates.
+- Shows offline, paused, failed, and last successful sync clearly.
+- Corrects decimal rounding and discount handling; keeps fixed discounts when
+  reopening, copying, or converting invoices.
+- Preserves exact entered totals and recorded overpayments.
+- Improves A4 page use, text size, continuation headings, and actual-size printing.
+- Adds clearer dashboard and invoice lists, readable balances, and a Balance due
+  filter that includes partial payments.
 
-Install the update over the existing app to keep your saved business data.
-You can also reopen InvoiceHub and choose **Update Now**.
+Install over the existing app to keep saved data, or reopen InvoiceHub and choose
+**Update Now**.
 
-## What changed in 1.1.6
+## Verification
 
-- Entering a line total of **₹15,000** now keeps it at **₹15,000.00**.
-- Selling price, taxable value, and GST are adjusted together so their sum
-  matches the exact amount entered.
-- Amounts with paise, such as **₹15,000.01**, also stay exact.
-- Entered totals survive saving, reopening, description edits, copying, and
-  converting documents across Windows, Linux, and Android.
-- Changing quantity, price, discount, or tax recalculates the line from those
-  changed values.
-- The desktop updater's YAML library includes its latest security fix.
-- The Linux installer includes the package information needed by its updater.
-
-## Verification of 1.1.6
-
-- All 151 Windows/Web application checks passed.
-- All 18 desktop updater and security checks passed.
-- All 141 Android checks passed.
-- Web lint and Android analysis completed without errors. Existing style
-  warnings and older-library notices remain.
-- The production desktop dependency audit reports zero known vulnerabilities.
-  The full development workspace audit reports 24 findings.
-- The signed Android APK package name, version 1.1.6, build 12, alignment,
-  size, checksum, and trusted signing certificate were verified.
-- Windows and Linux packages embed version 1.1.6. Their update files match
-  the exact installers.
-- The Linux package structure, executable permissions, and update identity
-  were verified.
-- A fresh installation was not manually checked during this release.
-  No physical Android phone or Linux computer was used for installation checks.
-
-## SHA-256
-
-- Windows installer:
-  `53137d757318cdb0c33f19222b0c7a0876cfc5fb67d690fd39ae3a0f9803d466`
-- Linux installer:
-  `e87a3131b1f5aae9bed1152c9f96cc33b79465bcf9c099169fd089e6bde6ed6d`
-- Android 1.1.7 APK:
-  `7a8946bf023e567d2fbe338d568f856a0f403f8ef76a464f8738bad87afde43a`
+- 174 Web checks, 20 desktop checks, and 151 Android checks passed.
+- A fictional Rs. 15,000.00 invoice kept its total after saving and reopening.
+  A Rs. 5,000.00 payment correctly left Rs. 10,000.00 due.
+- Desktop and Android A4 samples were generated and visually inspected.
+- Live syncing between signed-in devices, physical printing, and physical Android
+  and Linux installation were not tested in this release.
+- See the release notes for package checks and the attached `checksums.json` for
+  file sizes and SHA-256 values.
 
 ## Important
 
