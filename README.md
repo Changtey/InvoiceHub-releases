@@ -6,49 +6,44 @@ InvoiceHub is an offline-first GST billing and business app for Indian small bus
 
 | Platform | Version | Download |
 | --- | --- | --- |
-| Windows 10/11, 64-bit | 1.1.11 | [Windows installer](https://github.com/Changtey/InvoiceHub-releases/releases/download/v1.1.11/InvoiceHub-Setup-1.1.11.exe) |
-| Debian/Ubuntu Linux, 64-bit | 1.1.11 | [Linux installer](https://github.com/Changtey/InvoiceHub-releases/releases/download/v1.1.11/InvoiceHub-1.1.11-linux.deb) |
-| Android 7 or newer | 1.1.13 (build 18) | [Android APK](https://github.com/Changtey/InvoiceHub-releases/releases/download/v1.1.13/InvoiceHub-Android-1.1.13.apk) |
+| Windows 10/11, 64-bit | 1.1.14 | [Windows installer](https://github.com/Changtey/InvoiceHub-releases/releases/download/v1.1.14/InvoiceHub-Setup-1.1.14.exe) |
+| Debian/Ubuntu Linux, 64-bit | 1.1.14 | [Linux installer](https://github.com/Changtey/InvoiceHub-releases/releases/download/v1.1.14/InvoiceHub-1.1.14-linux.deb) |
+| Android 7 or newer | 1.1.14 (build 19) | [Android APK](https://github.com/Changtey/InvoiceHub-releases/releases/download/v1.1.14/InvoiceHub-Android-1.1.14.apk) |
 
-See [desktop 1.1.11](https://github.com/Changtey/InvoiceHub-releases/releases/tag/v1.1.11) and [Android 1.1.13](https://github.com/Changtey/InvoiceHub-releases/releases/tag/v1.1.13) for release notes, checksums, and update files.
+See the [InvoiceHub 1.1.14 release](https://github.com/Changtey/InvoiceHub-releases/releases/tag/v1.1.14) for release notes, checksums, and update files.
 
 ## Install or update
 
-- **Windows:** open `InvoiceHub-Setup-1.1.11.exe` and follow the installer. The installer is currently unsigned, so Windows may show a security warning. Confirm that it came from this official repository.
-- **Linux:** open `InvoiceHub-1.1.11-linux.deb` with Software Install, or run `sudo apt install ./InvoiceHub-1.1.11-linux.deb`. Linux may require administrator approval.
-- **Android:** open `InvoiceHub-Android-1.1.13.apk`. Android may ask you to allow installation from your browser or file manager and approve the installation.
+- **Windows:** open `InvoiceHub-Setup-1.1.14.exe` and follow the installer. The installer is currently unsigned, so Windows may show a security warning. Confirm that it came from this official repository.
+- **Linux:** open `InvoiceHub-1.1.14-linux.deb` with Software Install, or run `sudo apt install ./InvoiceHub-1.1.14-linux.deb`. Linux may require administrator approval.
+- **Android:** open `InvoiceHub-Android-1.1.14.apk`. Android may ask you to allow installation from your browser or file manager and approve the installation.
 
 Install over the existing app to retain saved business data. Do not uninstall the existing app as part of updating.
 
-InvoiceHub checks for new stable releases when it starts. Downloads begin after **Update Now**. The app verifies the update before installation. Interrupted downloads and failed installations leave the current working version in place. Newer Android phones may show an **InvoiceHub updated** notification that can be tapped to reopen the app.
+InvoiceHub checks for new stable releases when it starts. From 1.1.14 onward:
 
-## Android automatic syncing in 1.1.13
+- **Windows and Linux** download new versions in the background. The update installs when you choose **Restart & update**, or by itself the next time you open InvoiceHub, before you start working. Linux .deb installs ask for the administrator password.
+- **Android** downloads new versions by itself on Wi-Fi once you have allowed InvoiceHub to install updates. On mobile data it asks first. Android 12 and newer install later updates without another prompt; older phones show Android's install screen.
 
-Automatic syncing now reconnects after a temporary Google account check, including when that check finishes after app startup. Pending saves wait for account recovery and then upload automatically. Pausing Auto-sync still stops syncing.
+Every update is verified before installation. Interrupted downloads and failed installations leave the current working version in place.
 
-This update includes the installed-version repair from Android 1.1.12 and the invoice/PDF improvements from 1.1.11. Devices must use the same Workspace Key to share changes. This update does not combine separate workspaces.
+## What's new in 1.1.14
 
-Install the 1.1.13 APK over the existing app. Windows and Linux remain on version 1.1.11.
+- **Group by customer or supplier.** Sales, Purchases and Payments can show bills grouped under each party, with totals and balance due.
+- **Party page.** Click a customer or supplier to see all their invoices, quotations, orders, bills and payments together, and what they owe.
+- **Search by amount.** Find a bill by number, name, or total, for example `6372` or `₹6,372`.
+- **Product pictures.** Up to six pictures per product, resized automatically.
+- **New Home screen** with a getting-started checklist, quick actions, and "Who owes you".
+- **Help & about** with a step-by-step tutorial, the app version, and developer contact.
+- **Keyboard shortcuts** on desktop, and a more compact bill screen.
+- **Automatic updates** on Windows, Linux and Android, as described above.
 
-## What changed in 1.1.11
+## Fixes in 1.1.14
 
-- Invoice headings, quantities, rates, tax values, and amounts align consistently across all 20 templates.
-- Column widths account for the selected font and actual values, keeping large amounts together in the reviewed cases.
-- Receipt headers stay inside the paper, and continuation pages keep the complete invoice reference.
-- Android Heritage invoices align wrapped numeric headings and the tax summary correctly.
-- Desktop Save, Save Draft, Save & Preview, and Save & New now explain missing company setup and keep entered document details.
-- Company state is optional when creating a company from a desktop document.
-- Desktop View, Edit, and More actions stay visible when transaction tables scroll. View and Edit have text labels.
-- Desktop Reports has five categories, search, short descriptions, and favorites.
-- The desktop app logo and favicon are bundled correctly for installed apps.
-
-## Verification
-
-- Android 1.1.13: all 215 checks passed, including four automatic-sync recovery checks. One optional sample-export check was skipped. All 24 Desktop sync checks also passed.
-- Previous desktop 1.1.11 validation included 251 web checks and 20 desktop checks.
-- 430 fictional PDFs across 530 pages were checked, including 4,420 measured table text positions. No clipping, overlapping text, missing glyphs, or table alignment errors were detected in those samples.
-- Package identities, versions, update metadata, and file checksums were verified. Android signing and alignment were checked against the existing trusted certificate.
-- Windows 1.1.11 was installed and its files verified locally. Physical Android/Linux installation, physical printing, and live sync between signed-in devices were not verified for this release.
+- New bills, payments and expenses use today's date in India (work between midnight and 5:30 AM was dated the previous day).
+- Desktop quotations, orders and purchase documents get their own number prefix (QT-, SO-, PB- …) instead of the invoice prefix; wrongly saved prefixes are repaired automatically.
+- Customer and supplier balances include bills with hand-typed names, and match on every page.
+- Payment totals count returns correctly; several desktop navigation issues are fixed.
 
 Use the attached `checksums.json` to verify download sizes and SHA-256 values. Download InvoiceHub only from this official repository.
 
