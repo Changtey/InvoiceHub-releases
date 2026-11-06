@@ -6,17 +6,17 @@ InvoiceHub is an offline-first GST billing and business app for Indian small bus
 
 | Platform | Version | Download |
 | --- | --- | --- |
-| Windows 10/11, 64-bit | 1.1.17 | [Windows installer](https://github.com/Changtey/InvoiceHub-releases/releases/download/v1.1.17/InvoiceHub-Setup-1.1.17.exe) |
-| Debian/Ubuntu Linux, 64-bit | 1.1.17 | [Linux installer](https://github.com/Changtey/InvoiceHub-releases/releases/download/v1.1.17/InvoiceHub-1.1.17-linux.deb) |
-| Android 7 or newer | 1.1.17 (build 22) | [Android APK](https://github.com/Changtey/InvoiceHub-releases/releases/download/v1.1.17/InvoiceHub-Android-1.1.17.apk) |
+| Windows 10/11, 64-bit | 1.1.18 | [Windows installer](https://github.com/Changtey/InvoiceHub-releases/releases/download/v1.1.18/InvoiceHub-Setup-1.1.18.exe) |
+| Debian/Ubuntu Linux, 64-bit | 1.1.18 | [Linux installer](https://github.com/Changtey/InvoiceHub-releases/releases/download/v1.1.18/InvoiceHub-1.1.18-linux.deb) |
+| Android 7 or newer | 1.1.18 (build 23) | [Android APK](https://github.com/Changtey/InvoiceHub-releases/releases/download/v1.1.18/InvoiceHub-Android-1.1.18.apk) |
 
-See the [InvoiceHub 1.1.17 release](https://github.com/Changtey/InvoiceHub-releases/releases/tag/v1.1.17) for release notes, checksums, and update files.
+See the [InvoiceHub 1.1.18 release](https://github.com/Changtey/InvoiceHub-releases/releases/tag/v1.1.18) for release notes, checksums, and update files.
 
 ## Install or update
 
-- **Windows:** open `InvoiceHub-Setup-1.1.17.exe` and follow the installer. The installer is currently unsigned, so Windows may show a security warning. Confirm that it came from this official repository.
-- **Linux:** open `InvoiceHub-1.1.17-linux.deb` with Software Install, or run `sudo apt install ./InvoiceHub-1.1.17-linux.deb`. Linux may require administrator approval.
-- **Android:** open `InvoiceHub-Android-1.1.17.apk`. Android may ask you to allow installation from your browser or file manager and approve the installation.
+- **Windows:** open `InvoiceHub-Setup-1.1.18.exe` and follow the installer. The installer is currently unsigned, so Windows may show a security warning. Confirm that it came from this official repository.
+- **Linux:** open `InvoiceHub-1.1.18-linux.deb` with Software Install, or run `sudo apt install ./InvoiceHub-1.1.18-linux.deb`. Linux may require administrator approval.
+- **Android:** open `InvoiceHub-Android-1.1.18.apk`. Android may ask you to allow installation from your browser or file manager and approve the installation.
 
 Install over the existing app to retain saved business data. Do not uninstall the existing app as part of updating.
 
@@ -27,7 +27,14 @@ InvoiceHub checks for new stable releases when it starts. From 1.1.14 onward:
 
 Every update is verified before installation. Interrupted downloads and failed installations leave the current working version in place.
 
-## What's new in 1.1.17
+## What's new in 1.1.18
+
+- **Sync you can rely on.** Every app now downloads only what changed since its last sync. Before, InvoiceHub could use up Firebase's free daily cloud limit, and then no device synced until 1:30 PM IST.
+- **Owners sign in with Google on Windows and Linux** (Settings → Data & sync → Sign in with Google), using the same Google account as their Android phone. Computers that joined with a Workspace Key keep their bills when they switch.
+- **Cashiers and assistants** still join with the Workspace Key the owner gives them.
+- **Android** shows when it last synced and how many changes are still waiting, and no longer stops syncing without telling you.
+
+## New in 1.1.17
 
 - **Google Play edition** updates quietly in the background instead of showing a full-screen update screen.
 - Windows, Linux and the Android APK on this page have no other changes; they move to 1.1.17 so every app shows the same version.
